@@ -11,6 +11,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
+
+// there is also good tool to figure out which color you prefer: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=AED581
 $bicycle-blog-primary: mat-palette($mat-indigo);
 $bicycle-blog-accent: mat-palette($mat-pink, A200, A100, A400);
 
