@@ -1,41 +1,13 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" #sidenav role="navigation">
-    <mat-nav-list>
-      <a (click)="sidenav.close()" mat-list-item routerLink="/signup"
-        ><mat-icon>fingerprint</mat-icon
-        ><span class="sidenav-item-caption">Signup</span></a
-      >
-      <a (click)="sidenav.close()"  mat-list-item routerLink="/login"
-        ><mat-icon>face</mat-icon
-        ><span class="sidenav-item-caption">Login</span></a
-      >
-      <!-- we cant use prop: mat-list-item on button - so we wrap with additional tag - same named as a prop in anchor tag.  -->
-      <mat-list-item>
-        <button (click)="sidenav.close()"  mat-icon-button>
-          <mat-icon>eject</mat-icon><span class="sidenav-item-caption">Logout</span>
-        </button>
-      </mat-list-item>
-    </mat-nav-list>
+    <!-- my custom component -->
+    <app-sidenav-list (onCloseEmitter)="sidenav.close()"></app-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <!-- here goes main conenten of site.  -->
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div><a routerLink="/">Logo</a></div>
-      <div fxHide.xs fxFlex fxLayout fxLayoutAlign="flex-end">
-        <ul fxLayout="row" fxLayoutGap="1rem" class="navigation-items">
-          <li><a routerLink="/signup">Signup</a></li>
-          <li><a routerLink="/login">Login</a></li>
-        </ul>
-      </div>
-    </mat-toolbar>
+    <app-header (onToggleSidenavEmitter)="sidenav.toggle()"></app-header>
     <main>
       <router-outlet></router-outlet>
-      <!-- <button (click)="sidenav.toggle()">Show sidenav</button> -->
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,5 +1,3 @@
-$font-color: white;
-$font-active-color: lightgrey;
 // sidenav styles
 mat-sidenav-container {
   height: 100%;
@@ -9,26 +7,5 @@ mat-sidenav-container {
   mat-sidenav {
     height: 100%;
     width: 40vw;
-    .sidenav-item-caption {
-      display: inline-block;
-      margin-left: 1rem;
-    }
-  }
-}
-
-//toolbar styles
-mat-toolbar {
-  a {
-    text-decoration: none;
-    color: $font-color;
-    &:hover,
-    &:active {
-      color: $font-active-color;
-    }
-  }
-  .navigation-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 }
