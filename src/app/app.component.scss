@@ -1,14 +1,22 @@
 $font-color: white;
 $font-active-color: lightgrey;
-
-mat-sidenav-container,
-mat-sidenav-content,
-mat-sidenav {
+// sidenav styles
+mat-sidenav-container {
   height: 100%;
+  mat-sidenav-content {
+    height: 100%;
+  }
+  mat-sidenav {
+    height: 100%;
+    width: 40vw;
+    .sidenav-item-caption {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
 }
-mat-sidenav {
-  width: 40vw;
-}
+
+//toolbar styles
 mat-toolbar {
   a {
     text-decoration: none;
