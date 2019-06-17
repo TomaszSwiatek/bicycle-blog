@@ -14,6 +14,8 @@ import { FormsModule } from "@angular/forms";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
 import { HeaderComponent } from "./navigation/header/header.component";
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ListComponent } from './articles/list/list.component';
+import { CreateComponent } from './articles/create/create.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     LoginComponent,
     SidenavListComponent,
     HeaderComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ListComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
