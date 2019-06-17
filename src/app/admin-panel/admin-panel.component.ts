@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-admin-panel',
-  templateUrl: './admin-panel.component.html',
-  styleUrls: ['./admin-panel.component.scss']
+  selector: "app-admin-panel",
+  templateUrl: "./admin-panel.component.html",
+  styleUrls: ["./admin-panel.component.scss"]
 })
 export class AdminPanelComponent implements OnInit {
+  tabLinks = [
+    {
+      path: "articles/list",
+      label: "Articles"
+    },
+    {
+      path: "../login",
+      label: "Create article"
+    }
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

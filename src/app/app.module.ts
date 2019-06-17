@@ -13,9 +13,9 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
 import { HeaderComponent } from "./navigation/header/header.component";
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import { ListComponent } from './articles/list/list.component';
-import { CreateComponent } from './articles/create/create.component';
+import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
+import { CreateArticleComponent } from "./articles/create-article/create-article.component";
+import { ArticleListComponent } from "./articles/article-list/article-list.component";
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import { CreateComponent } from './articles/create/create.component';
     SidenavListComponent,
     HeaderComponent,
     AdminPanelComponent,
-    ListComponent,
-    CreateComponent
+    CreateArticleComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,11 @@
-<p>
-  admin-panel works!
-</p>
+<nav mat-tab-nav-bar mat-align-tabs="center" animationDuration="2000ms">
+  <a
+    mat-tab-link
+    *ngFor="let link of tabLinks"
+    [routerLink]="link.path"
+    routerLinkActive="active"
+  >
+    {{ link.label }}
+  </a>
+</nav>
+<router-outlet></router-outlet>
