@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path: "admin/articles/list",
     component: ArticleListComponent
-  }
+  },
+  { path: "**", redirectTo: "/errorComponent" }
 ];
 
 @NgModule({
