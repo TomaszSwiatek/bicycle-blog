@@ -20,11 +20,11 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "articles/create",
+    path: "admin/articles/create",
     component: CreateArticleComponent
   },
   {
-    path: "articles/list",
+    path: "admin/articles/list",
     component: ArticleListComponent
   }
 ];

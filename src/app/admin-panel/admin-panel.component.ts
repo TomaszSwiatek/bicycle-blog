@@ -12,7 +12,7 @@ export class AdminPanelComponent implements OnInit {
       label: "Articles"
     },
     {
-      path: "../login",
+      path: "articles/create",
       label: "Create article"
     }
   ];
