@@ -4,4 +4,20 @@
   [value]="intervalProgressBar"
 >
 </mat-progress-bar>
-<p>error component</p>
+<section
+  class="error-wrapper"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="1.5rem"
+  ngClass.gt-sm="gt-sm"
+>
+  <mat-chip-list>
+    <mat-chip color="primary" selected>Address does not exist</mat-chip>
+  </mat-chip-list>
+  <mat-icon color="primary" aria-hidden="true" aria-label="Example home icon"
+    >error</mat-icon
+  >
+  <p color="accent">
+    You will be redirect to main page in {{ delayTime / 1000 }} seconds.
+  </p>
+</section>

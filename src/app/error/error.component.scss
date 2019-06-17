@@ -1,0 +1,23 @@
+.error-wrapper {
+  height: 100vh;
+}
+mat-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+.gt-sm {
+  font-size: 4rem;
+  mat-chip {
+    font-size: 4rem;
+    padding: 3rem;
+  }
+  mat-icon {
+    font-size: 6rem;
+  }
+  p {
+    width: 80%;
+    text-align: center;
+  }
+}
