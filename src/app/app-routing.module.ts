@@ -7,16 +7,17 @@ import { Routes, RouterModule } from "@angular/router";
 import { CreateArticleComponent } from "./articles/create-article/create-article.component";
 
 const routes: Routes = [
+  { path: "", redirectTo: "/admin", pathMatch: "full" },
   {
     path: "admin",
     component: AdminPanelComponent
   },
   {
-    path: "signup",
+    path: "admin/signup",
     component: SignupComponent
   },
   {
-    path: "login",
+    path: "admin/login",
     component: LoginComponent
   },
   {

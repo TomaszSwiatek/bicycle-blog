@@ -1,11 +1,23 @@
-<nav mat-tab-nav-bar mat-align-tabs="center" animationDuration="2000ms">
-  <a
-    mat-tab-link
-    *ngFor="let link of tabLinks"
-    [routerLink]="link.path"
-    routerLinkActive="active"
-  >
-    {{ link.label }}
-  </a>
-</nav>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #sidenav role="navigation">
+    <!-- my custom component -->
+    <app-sidenav-list (onCloseEmitter)="sidenav.close()"></app-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- here goes main conenten of site.  -->
+    <app-header (onToggleSidenavEmitter)="sidenav.toggle()"></app-header>
+    <main>
+      <!-- admin panel content -->
+      <nav mat-tab-nav-bar mat-align-tabs="center" animationDuration="2000ms">
+        <a
+          mat-tab-link
+          *ngFor="let link of tabLinks"
+          [routerLink]="link.path"
+          routerLinkActive="active"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
