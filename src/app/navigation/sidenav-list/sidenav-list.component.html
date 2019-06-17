@@ -1,9 +1,19 @@
 <mat-nav-list>
-  <a (click)="onClose()" mat-list-item routerLink="/signup">
+  <a
+    (click)="onClose()"
+    mat-list-item
+    routerLink="/signup"
+    routerLinkActive="active"
+  >
     <mat-icon>fingerprint</mat-icon
     ><span class="sidenav-item-caption">Signup</span>
   </a>
-  <a (click)="onClose()" mat-list-item routerLink="/login">
+  <a
+    (click)="onClose()"
+    mat-list-item
+    routerLink="/login"
+    routerLinkActive="active"
+  >
     <mat-icon>face</mat-icon><span class="sidenav-item-caption">Login</span>
   </a>
   <!-- we cant use prop: mat-list-item on button - so we wrap with additional tag - same named as a prop in anchor tag.  -->
