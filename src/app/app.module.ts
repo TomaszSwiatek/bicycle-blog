@@ -16,6 +16,7 @@ import { HeaderComponent } from "./navigation/header/header.component";
 import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { CreateArticleComponent } from "./articles/create-article/create-article.component";
 import { ArticleListComponent } from "./articles/article-list/article-list.component";
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ArticleListComponent } from "./articles/article-list/article-list.compo
     HeaderComponent,
     AdminPanelComponent,
     CreateArticleComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

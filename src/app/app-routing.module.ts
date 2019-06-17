@@ -5,6 +5,7 @@ import { SignupComponent } from "./auth/signup/signup.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { CreateArticleComponent } from "./articles/create-article/create-article.component";
+import { ErrorComponent } from "./error/error.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/admin", pathMatch: "full" },
@@ -28,7 +29,7 @@ const routes: Routes = [
     path: "admin/articles/list",
     component: ArticleListComponent
   },
-  { path: "**", redirectTo: "/errorComponent" }
+  { path: "**", component: ErrorComponent }
 ];
 
 @NgModule({
