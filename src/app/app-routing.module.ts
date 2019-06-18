@@ -1,3 +1,4 @@
+import { ArticleComponent } from "./articles/article/article.component";
 import { ArticleListComponent } from "./articles/article-list/article-list.component";
 import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { LoginComponent } from "./auth/login/login.component";
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: "admin/articles/list",
     component: ArticleListComponent
+  },
+  {
+    path: "article/:id",
+    component: ArticleComponent
   },
   { path: "**", component: ErrorComponent }
 ];

@@ -7,12 +7,12 @@ import { Router } from "@angular/router";
   styleUrls: ["./error.component.scss"]
 })
 export class ErrorComponent implements OnInit {
-  delayTime: number = 5000;
+  delayTime: number = 7000;
   intervalProgressBar: number = 0; //binded to mat-progress-bar value.
 
   constructor(private router: Router) {
     // shows error component as many seconds as we define in delayTime variable, and then redirect to home page.
-    // setTimeout(() => router.navigate([""]), this.delayTime);
+    setTimeout(() => router.navigate([""]), this.delayTime);
     // run progress bar untill will achive (value) equal to 100.
     setInterval(
       () => {

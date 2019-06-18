@@ -17,6 +17,7 @@ import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { CreateArticleComponent } from "./articles/create-article/create-article.component";
 import { ArticleListComponent } from "./articles/article-list/article-list.component";
 import { ErrorComponent } from './error/error.component';
+import { ArticleComponent } from './articles/article/article.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ErrorComponent } from './error/error.component';
     AdminPanelComponent,
     CreateArticleComponent,
     ArticleListComponent,
-    ErrorComponent
+    ErrorComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
