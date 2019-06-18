@@ -8,12 +8,20 @@ import { Router } from "@angular/router";
   styleUrls: ["./signup.component.scss"]
 })
 export class SignupComponent implements OnInit {
+  // we didnt use it yet - var. underneath.
+  public username: string = "";
+  public password: string = "";
+  public nick: string = "";
+
   constructor(private router: Router) {}
+
+  // normal register without firebase auth - navigate to 241 site - ebook.
 
   ngOnInit() {}
 
   onSubmit(form: NgForm) {
     console.log(form.value.email, form.value.password);
-    this.router.navigate(["admin"]);
+    this.router.navigate(["login"]); //more about navigate method 241 at the bottom
+    // this.router.navigate(["../"], { relativeTo: this.route }); //how to navigate to parent of current child- where we are. additionaly we need to inject route: Route from angular/router.
   }
 }
