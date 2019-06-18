@@ -1,3 +1,4 @@
+import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { MainSiteComponent } from "./main-site/main-site.component";
 import { ArticleComponent } from "./articles/article/article.component";
 import { NgModule } from "@angular/core";
@@ -11,8 +12,8 @@ const routes: Routes = [
     component: MainSiteComponent
   },
   {
-    path: "article/:id",
-    component: ArticleComponent
+    path: "admin",
+    component: AdminPanelComponent
   },
   { path: "**", component: ErrorComponent }
 ];
