@@ -1,3 +1,6 @@
+import { AdminRoutingModule } from "./admin-panel/admin-routing.module";
+// import { AdminRoutingModule } from "./articles/articles-routing.module";
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -16,8 +19,9 @@ import { HeaderComponent } from "./navigation/header/header.component";
 import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { CreateArticleComponent } from "./articles/create-article/create-article.component";
 import { ArticleListComponent } from "./articles/article-list/article-list.component";
-import { ErrorComponent } from './error/error.component';
-import { ArticleComponent } from './articles/article/article.component';
+import { ErrorComponent } from "./error/error.component";
+import { ArticleComponent } from "./articles/article/article.component";
+import { MainSiteComponent } from "./main-site/main-site.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { ArticleComponent } from './articles/article/article.component';
     CreateArticleComponent,
     ArticleListComponent,
     ErrorComponent,
-    ArticleComponent
+    ArticleComponent,
+    MainSiteComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { ArticleComponent } from './articles/article/article.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule
+    // AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

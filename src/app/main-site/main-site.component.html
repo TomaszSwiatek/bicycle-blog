@@ -1,0 +1,8 @@
+<div
+  *ngFor="let article of articles"
+  class="articles-container"
+  routerLink="/article/{{ article.id }}"
+>
+  <h1>{{ article.h1 }}</h1>
+  <p>{{ article.p }}</p>
+</div>
