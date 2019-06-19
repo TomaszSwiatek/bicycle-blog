@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class AdminPanelComponent implements OnInit {
   tabLinks = [
     {
-      path: "articles/list",
+      path: "./loggedin/articles",
       label: "Articles"
     },
     {
-      path: "articles/create",
+      path: "./loggedin/create",
       label: "Create article"
     }
   ];

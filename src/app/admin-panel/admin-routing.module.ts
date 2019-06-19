@@ -3,35 +3,36 @@ import { CreateArticleComponent } from "./../articles/create-article/create-arti
 import { SignupComponent } from "./../auth/signup/signup.component";
 import { LoginComponent } from "./../auth/login/login.component";
 import { AdminPanelComponent } from "./admin-panel.component";
-import { MainSiteComponent } from "./../main-site/main-site.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-const routes: Routes = [
+const adminRoutes: Routes = [
   {
-    path: "admin",
-    component: AdminPanelComponent
-  },
-  {
-    path: "login",
-    component: LoginComponent
-  },
-  {
-    path: "signup",
-    component: SignupComponent
-  },
-  {
-    path: "loggedin/create",
-    component: CreateArticleComponent
-  },
-  {
-    path: "loggedin/articles",
-    component: ArticleListComponent
+    path: "",
+    component: AdminPanelComponent,
+    children: [
+      {
+        path: "login",
+        component: LoginComponent
+      },
+      {
+        path: "signup",
+        component: SignupComponent
+      },
+      {
+        path: "loggedin/create",
+        component: CreateArticleComponent
+      },
+      {
+        path: "loggedin/articles",
+        component: ArticleListComponent
+      }
+    ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(adminRoutes)],
   exports: [RouterModule]
 })
 export class AdminRoutingModule {}

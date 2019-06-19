@@ -1,6 +1,5 @@
 import { AdminPanelComponent } from "./admin-panel/admin-panel.component";
 import { MainSiteComponent } from "./main-site/main-site.component";
-import { ArticleComponent } from "./articles/article/article.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ErrorComponent } from "./error/error.component";
@@ -9,17 +8,23 @@ const routes: Routes = [
   // { path: "", redirectTo: "/admin", pathMatch: "full" },
   {
     path: "",
-    component: MainSiteComponent
+    loadChildren: () =>
+      import("./main-site/main-site.module").then(mod => mod.MainSiteModule)
+    // component: MainSiteComponent
   },
   {
     path: "admin",
-    component: AdminPanelComponent
+    loadChildren: () =>
+      import("./admin-panel/admin-panel.module").then(
+        mod => mod.AdminPanelModule
+      )
+    // component: AdminPanelComponent
   },
   { path: "**", component: ErrorComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
