@@ -3,9 +3,21 @@ import { MainSiteRoutingModule } from "./main-site-routing.module";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MainSiteComponent } from "./main-site.component";
+import { MainSiteArticleListComponent } from "./main-site-article-list/main-site-article-list.component";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MaterialModule } from "./../material.module";
 
 @NgModule({
-  imports: [CommonModule, MainSiteRoutingModule],
-  declarations: [MainSiteComponent, ArticleComponent]
+  imports: [
+    CommonModule,
+    MainSiteRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
+  ],
+  declarations: [
+    MainSiteComponent,
+    ArticleComponent,
+    MainSiteArticleListComponent
+  ]
 })
 export class MainSiteModule {}

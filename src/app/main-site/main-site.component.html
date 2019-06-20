@@ -1,9 +1,13 @@
-<div
-  *ngFor="let article of articles"
-  class="articles-container"
-  routerLink="/article/{{ article.id }}"
->
-  <h1>{{ article.h1 }}</h1>
-  <p>{{ article.p }}</p>
-</div>
-<router-outlet></router-outlet>
+<mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+  <mat-tab label="Poland">
+    <app-main-site-article-list>
+      <!-- we will add to that diff. data ( data filter maybe) later -->
+    </app-main-site-article-list>
+  </mat-tab>
+  <mat-tab label="Europe">
+    <app-main-site-article-list>
+      <!-- we will add to that diff. data ( data filter maybe) later -->
+    </app-main-site-article-list>
+  </mat-tab>
+</mat-tab-group>
+<!-- <router-outlet></router-outlet> -->
