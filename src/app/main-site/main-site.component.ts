@@ -6,6 +6,17 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./main-site.component.scss"]
 })
 export class MainSiteComponent implements OnInit {
+  tabLinks: [
+    {
+      path: "./";
+      label: "Europe";
+    },
+    {
+      path: "./";
+      label: "Poland";
+    }
+  ];
+
   constructor() {}
 
   ngOnInit() {}

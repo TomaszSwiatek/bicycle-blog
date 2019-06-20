@@ -1,13 +1,37 @@
-<mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+<!-- <mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
   <mat-tab label="Poland">
     <app-main-site-article-list>
-      <!-- we will add to that diff. data ( data filter maybe) later -->
+
     </app-main-site-article-list>
   </mat-tab>
   <mat-tab label="Europe">
     <app-main-site-article-list>
-      <!-- we will add to that diff. data ( data filter maybe) later -->
+
     </app-main-site-article-list>
   </mat-tab>
 </mat-tab-group>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet> -->
+
+<nav mat-tab-nav-bar mat-align-tabs="center">
+  <a
+    mat-tab-link
+    routerLink="/"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    Europe
+  </a>
+  <a
+    mat-tab-link
+    routerLink="/article/1"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    Poland
+  </a>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
