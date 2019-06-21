@@ -9,6 +9,9 @@
     <ul fxLayout="row" fxLayoutGap="1rem" class="navigation-items">
       <li><a routerLink="./signup" routerLinkActive="active">Signup</a></li>
       <li><a routerLink="./login" routerLinkActive="active">Login</a></li>
+      <li>
+        <a routerLink="/" (click)="onClose()">Logout</a>
+      </li>
     </ul>
   </div>
 </mat-toolbar>

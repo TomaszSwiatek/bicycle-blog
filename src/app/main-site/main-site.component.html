@@ -16,6 +16,7 @@
   <a
     mat-tab-link
     routerLink="/"
+    [routerLinkActiveOptions]="{ exact: true }"
     routerLinkActive
     #rla="routerLinkActive"
     [active]="rla.isActive"
