@@ -24,6 +24,11 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit() {}
 
   onLogout() {
-    this.logoutDialog.open(LogoutDialogComponent);
+    const dialogRef = this.logoutDialog.open(LogoutDialogComponent);
+
+    //dialogref is reference to our event on logout button which listen when to open dialog. On this we fire this methods to get value true/false after user clicks - yes or no. (this data is binded in logoutDialogComponent - in template. )
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    });
   }
 }
