@@ -1,4 +1,6 @@
+import { LogoutDialogComponent } from "./../navigation/logout-dialog.component";
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material";
 
 @Component({
   selector: "app-admin-panel",
@@ -17,7 +19,11 @@ export class AdminPanelComponent implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor(private logoutDialog: MatDialog) {}
 
   ngOnInit() {}
+
+  onLogout() {
+    this.logoutDialog.open(LogoutDialogComponent);
+  }
 }

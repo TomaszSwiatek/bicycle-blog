@@ -1,3 +1,4 @@
+import { LogoutDialogComponent } from "./../navigation/logout-dialog.component";
 import { MaterialModule } from "./../material.module";
 import { NgModule } from "@angular/core";
 import { AdminRoutingModule } from "./admin-routing.module";
@@ -30,7 +31,9 @@ import { HeaderComponent } from "./../navigation/header/header.component";
     LoginComponent,
     AdminPanelComponent,
     SidenavListComponent,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    LogoutDialogComponent
+  ],
+  entryComponents: [LogoutDialogComponent]
 })
 export class AdminPanelModule {}
