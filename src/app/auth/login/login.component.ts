@@ -1,3 +1,4 @@
+import { AuthService } from "./../auth.service";
 import { NgForm } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
@@ -8,11 +9,16 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {}
   onLogin(form: NgForm) {
-    console.log(form.value.email, form.value.password);
+    this.authService.login({
+      email: form.value.email,
+      password: form.value.password
+    });
+
+    // console.log(form.value.email, form.value.password);
     this.router.navigate(["admin"]);
   }
 }

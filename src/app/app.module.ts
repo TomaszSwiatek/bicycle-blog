@@ -1,3 +1,4 @@
+import { AuthService } from "./auth/auth.service";
 import { MaterialModule } from "./material.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -18,7 +19,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [AuthService], //we have to provide our auth service in whole app. this is important becouse we have to use only on instance of that service(component in real).
   bootstrap: [AppComponent]
 })
 export class AppModule {}
