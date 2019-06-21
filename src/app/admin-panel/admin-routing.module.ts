@@ -12,20 +12,20 @@ const adminRoutes: Routes = [
     path: "",
     component: AdminPanelComponent,
     children: [
+      { path: "", redirectTo: "login", pathMatch: "full" },
       {
-        path: "",
+        path: "manage",
         component: ManageArticlesComponent,
         children: [
           {
-            path: "loggedin/create",
+            path: "create",
             component: CreateArticleComponent
           },
           {
-            path: "loggedin/articles",
+            path: "articles",
             component: ArticleListComponent
           }
         ]
-
       },
       {
         path: "login",

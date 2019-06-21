@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class ManageArticlesComponent implements OnInit {
   tabLinks = [
     {
-      path: "./loggedin/articles",
+      path: "./articles",
       label: "Articles"
     },
     {
-      path: "./loggedin/create",
+      path: "./create",
       label: "Create article"
     }
   ];

@@ -8,14 +8,27 @@
     class="logo-header"
     [ngStyle.xs]="{ 'background-position-x': 'right' }"
     fxFlex
-    routerLink="./"
+    routerLink="/"
   ></div>
   <div fxHide.xs fxFlex fxLayout fxLayoutAlign="flex-end">
     <ul fxLayout="row" fxLayoutGap="1rem" class="navigation-items">
-      <li><a routerLink="./signup" routerLinkActive="active">Signup</a></li>
-      <li><a routerLink="./login" routerLinkActive="active">Login</a></li>
       <li>
-        <a routerLink="/" (click)="onLogout()">Logout</a>
+        <a routerLink="./manage" routerLinkActive="active" *ngIf="isAuth"
+          >Manage Articles</a
+        >
+      </li>
+      <li>
+        <a routerLink="./signup" routerLinkActive="active" *ngIf="!isAuth"
+          >Signup</a
+        >
+      </li>
+      <li>
+        <a routerLink="./login" routerLinkActive="active" *ngIf="!isAuth"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a routerLink="/" (click)="onLogout()" *ngIf="isAuth">Logout</a>
       </li>
     </ul>
   </div>
