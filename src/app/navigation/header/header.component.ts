@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       }
     );
   }
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     //we need to unsubscribe subscription every time component is destroy, becouseof it we ve created this cycle hook and implement here unsubscribe:
     this.authSubscription.unsubscribe(); //this clears/releases uneeded memory.
   }

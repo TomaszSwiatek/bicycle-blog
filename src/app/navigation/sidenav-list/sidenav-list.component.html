@@ -1,5 +1,6 @@
 <mat-nav-list>
   <a
+    *ngIf="!isAuth"
     (click)="onClose()"
     mat-list-item
     routerLink="./signup"
@@ -9,6 +10,7 @@
     ><span class="sidenav-item-caption">Signup</span>
   </a>
   <a
+    *ngIf="!isAuth"
     (click)="onClose()"
     mat-list-item
     routerLink="./login"
@@ -16,8 +18,18 @@
   >
     <mat-icon>face</mat-icon><span class="sidenav-item-caption">Login</span>
   </a>
+  <a
+    *ngIf="isAuth"
+    (click)="onClose()"
+    mat-list-item
+    routerLink="./manage"
+    routerLinkActive="active"
+  >
+    <mat-icon>edit</mat-icon><span class="sidenav-item-caption">Manage</span>
+  </a>
   <!-- we cant use prop: mat-list-item on button - so we wrap with additional tag - same named as a prop in anchor tag.  -->
-  <mat-list-item>
+
+  <mat-list-item *ngIf="isAuth">
     <button (click)="onLogout()" mat-icon-button>
       <mat-icon>eject</mat-icon><span class="sidenav-item-caption">Logout</span>
     </button>
