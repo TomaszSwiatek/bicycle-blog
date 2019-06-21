@@ -1,3 +1,4 @@
+import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 import { MainSiteArticleListComponent } from "./main-site-article-list/main-site-article-list.component";
 import { MainSiteComponent } from "./main-site.component";
 import { ArticleComponent } from "./../articles/article/article.component";
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: "article/:id",
         component: ArticleComponent
+      },
+      {
+        path: "privacy-policy",
+        component: PrivacyPolicyComponent
       }
     ]
   }
