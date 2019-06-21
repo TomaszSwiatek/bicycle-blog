@@ -1,7 +1,5 @@
-.active {
-  color: pink;
-}
-// sidenav styles
+@import "./../../my-theme.scss";
+
 mat-sidenav-container {
   height: 100%;
   mat-sidenav-content {
@@ -10,5 +8,12 @@ mat-sidenav-container {
   mat-sidenav {
     height: 100%;
     width: 40vw;
+  }
+
+  a {
+    color: grey;
+    &.active {
+      color: darken($accent, 30%);
+    }
   }
 }

@@ -14,10 +14,10 @@
 
 // there is also good tool to figure out which color you prefer: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=AED581
 $bicycle-blog-primary: mat-palette($mat-amber);
-$bicycle-blog-accent: mat-palette($mat-pink, A200, A100, A400);
+$bicycle-blog-accent: mat-palette($mat-lime, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$bicycle-blog-warn: mat-palette($mat-red);
+$bicycle-blog-warn: mat-palette($mat-deep-orange);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $bicycle-blog-theme: mat-light-theme(
@@ -30,3 +30,7 @@ $bicycle-blog-theme: mat-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($bicycle-blog-theme);
+
+$primary: mat-color($bicycle-blog-primary);
+$accent: mat-color($bicycle-blog-accent);
+$warn: mat-color($bicycle-blog-warn);
