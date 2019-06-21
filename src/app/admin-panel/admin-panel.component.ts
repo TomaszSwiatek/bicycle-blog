@@ -8,17 +8,6 @@ import { MatDialog } from "@angular/material";
   styleUrls: ["./admin-panel.component.scss"]
 })
 export class AdminPanelComponent implements OnInit {
-  tabLinks = [
-    {
-      path: "./loggedin/articles",
-      label: "Articles"
-    },
-    {
-      path: "./loggedin/create",
-      label: "Create article"
-    }
-  ];
-
   // @Output() loggedOut = new EventEmitter();
   loggedOut: boolean;
 

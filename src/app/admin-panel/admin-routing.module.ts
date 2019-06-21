@@ -1,3 +1,4 @@
+import { ManageArticlesComponent } from "./manage-articles/manage-articles.component";
 import { ArticleListComponent } from "./../articles/article-list/article-list.component";
 import { CreateArticleComponent } from "./../articles/create-article/create-article.component";
 import { SignupComponent } from "./../auth/signup/signup.component";
@@ -12,20 +13,27 @@ const adminRoutes: Routes = [
     component: AdminPanelComponent,
     children: [
       {
+        path: "",
+        component: ManageArticlesComponent,
+        children: [
+          {
+            path: "loggedin/create",
+            component: CreateArticleComponent
+          },
+          {
+            path: "loggedin/articles",
+            component: ArticleListComponent
+          }
+        ]
+
+      },
+      {
         path: "login",
         component: LoginComponent
       },
       {
         path: "signup",
         component: SignupComponent
-      },
-      {
-        path: "loggedin/create",
-        component: CreateArticleComponent
-      },
-      {
-        path: "loggedin/articles",
-        component: ArticleListComponent
       }
     ]
   }

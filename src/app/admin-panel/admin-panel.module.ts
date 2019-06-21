@@ -15,6 +15,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
 import { SidenavListComponent } from "./../navigation/sidenav-list/sidenav-list.component";
 import { HeaderComponent } from "./../navigation/header/header.component";
+import { ManageArticlesComponent } from './manage-articles/manage-articles.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { HeaderComponent } from "./../navigation/header/header.component";
     AdminPanelComponent,
     SidenavListComponent,
     HeaderComponent,
-    LogoutDialogComponent
+    LogoutDialogComponent,
+    ManageArticlesComponent
   ],
   entryComponents: [LogoutDialogComponent]
 })
