@@ -1,5 +1,5 @@
 $font-color: white;
-$font-active-color: lightgrey;
+$font-active-color: grey;
 
 mat-toolbar {
   a {
@@ -17,5 +17,12 @@ mat-toolbar {
   }
   .active {
     color: $font-active-color;
+  }
+  .logo-header {
+    height: 80%;
+    width: auto;
+    background: url("./../../../assets/bicycle-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
