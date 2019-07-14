@@ -1,4 +1,4 @@
-import { AuthService } from "./auth/auth.service";
+import { AuthService } from "./admin-panel/auth/auth.service";
 import { MaterialModule } from "./material.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
