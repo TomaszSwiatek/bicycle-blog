@@ -1,4 +1,4 @@
-import { LogoutDialogComponent } from "./../navigation/logout-dialog.component";
+import { LogoutDialogComponent } from "./navigation/logout-dialog.component";
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { MatDialog } from "@angular/material";
 

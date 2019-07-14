@@ -1,4 +1,4 @@
-import { LogoutDialogComponent } from "./../navigation/logout-dialog.component";
+import { LogoutDialogComponent } from "./navigation/logout-dialog.component";
 import { MaterialModule } from "./../material.module";
 import { NgModule } from "@angular/core";
 import { AdminRoutingModule } from "./admin-routing.module";
@@ -13,8 +13,8 @@ import { AdminPanelComponent } from "./admin-panel.component";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
-import { SidenavListComponent } from "./../navigation/sidenav-list/sidenav-list.component";
-import { HeaderComponent } from "./../navigation/header/header.component";
+import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
+import { HeaderComponent } from "./navigation/header/header.component";
 import { ManageArticlesComponent } from "./manage-articles/manage-articles.component";
 
 @NgModule({

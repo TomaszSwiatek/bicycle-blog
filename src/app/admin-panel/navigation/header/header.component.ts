@@ -1,5 +1,5 @@
 import { Subscription } from "rxjs"; //we need this obj to unsubscribe.
-import { AuthService } from "./../../auth/auth.service";
+import { AuthService } from "./../../../auth/auth.service";
 import {
   Component,
   OnInit,
