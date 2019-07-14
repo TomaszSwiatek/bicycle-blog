@@ -1,5 +1,5 @@
 import { AgreementDialogComponent } from "./agreementDialog.component";
-import { ArticleComponent } from "./../articles/article/article.component";
+import { ArticleComponent } from "./article/article.component";
 import { MainSiteRoutingModule } from "./main-site-routing.module";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";

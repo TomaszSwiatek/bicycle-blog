@@ -1,7 +1,7 @@
 import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 import { MainSiteArticleListComponent } from "./main-site-article-list/main-site-article-list.component";
 import { MainSiteComponent } from "./main-site.component";
-import { ArticleComponent } from "./../articles/article/article.component";
+import { ArticleComponent } from "./article/article.component";
 import { Routes } from "@angular/router";
 import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
