@@ -19,6 +19,6 @@ export class LoginComponent implements OnInit {
     });
 
     // console.log(form.value.email, form.value.password);
-    this.router.navigate(["admin"]);
+    this.router.navigate(["admin/manage"]);
   }
 }

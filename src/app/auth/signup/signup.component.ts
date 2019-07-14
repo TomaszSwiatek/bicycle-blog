@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
     // console.log(form.value.email, form.value.password);
 
-    this.router.navigate(["login"]); //more about navigate method 241 at the bottom
+    this.router.navigate(["/admin/manage"]); //more about navigate method 241 at the bottom
     // this.router.navigate(["../"], { relativeTo: this.route }); //how to navigate to parent of current child- where we are. additionaly we need to inject route: Route from angular/router.
   }
 }

@@ -23,12 +23,16 @@
         >
       </li>
       <li>
-        <a routerLink="./login" routerLinkActive="active" *ngIf="!isAuth"
+        <a
+          (click)="onLogin()"
+          routerLink="./login"
+          routerLinkActive="active"
+          *ngIf="!isAuth"
           >Login</a
         >
       </li>
       <li>
-        <a routerLink="/" (click)="onLogout()" *ngIf="isAuth">Logout</a>
+        <a (click)="onLogout()" *ngIf="isAuth">Logout</a>
       </li>
     </ul>
   </div>

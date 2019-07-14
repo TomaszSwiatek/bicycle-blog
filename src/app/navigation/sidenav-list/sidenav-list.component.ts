@@ -40,6 +40,8 @@ export class SidenavListComponent implements OnInit, OnDestroy {
 
   // method from admin-panel parent component to handle logout dialog, asking - is user sure to logout.
   onLogout() {
-    this.logoutEmitter.next();
+    this.logoutEmitter.next(); //comment it?
+    this.authService.logout();
+    this.onClose(); //also close sidenav when clicked
   }
 }

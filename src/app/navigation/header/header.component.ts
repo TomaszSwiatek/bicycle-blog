@@ -40,6 +40,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   // method from admin-panel parent component to handle logout dialog, asking - is user sure to logout.
   onLogout() {
-    this.logoutEmitter.next();
+    this.logoutEmitter.next(); //comment it?
+    this.authService.logout();
+  }
+  onLogin() {
+    // this.authService.login(); //we have to add param, and end this
   }
 }
