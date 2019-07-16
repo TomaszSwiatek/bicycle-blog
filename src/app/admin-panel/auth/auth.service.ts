@@ -10,7 +10,7 @@ export class AuthService {
   // we create new subject which can store payloads (rxjs)
   authChange = new Subject<boolean>();
   // we store created user
-  private user: User;
+  private user: User = null;
 
   constructor(private router: Router) {}
 

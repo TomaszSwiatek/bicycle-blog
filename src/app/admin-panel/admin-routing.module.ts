@@ -1,3 +1,4 @@
+import { AuthGuard } from "./auth/auth.guard";
 import { ManageArticlesComponent } from "./manage-articles/manage-articles.component";
 import { ArticleListComponent } from "./manage-articles/article-list/article-list.component";
 import { CreateArticleComponent } from "./manage-articles/create-article/create-article.component";
@@ -16,6 +17,7 @@ const adminRoutes: Routes = [
       {
         path: "manage",
         component: ManageArticlesComponent,
+        canActivate: [AuthGuard],
         children: [
           {
             path: "create",
@@ -41,6 +43,7 @@ const adminRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(adminRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AdminRoutingModule {}
