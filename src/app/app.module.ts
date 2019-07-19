@@ -1,3 +1,4 @@
+import { ArticleService } from "./main-site/article/article.service";
 import { AuthService } from "./admin-panel/auth/auth.service";
 import { MaterialModule } from "./material.module";
 import { BrowserModule } from "@angular/platform-browser";
@@ -19,7 +20,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [AuthService], //we have to provide our auth service in whole app. this is important becouse we have to use only on instance of that service(component in real).
+  providers: [AuthService, ArticleService], //we have to provide our auth service in whole app. this is important becouse we have to use only on instance of that service(component in real).
   bootstrap: [AppComponent]
 })
 export class AppModule {}

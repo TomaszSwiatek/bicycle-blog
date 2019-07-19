@@ -1,3 +1,5 @@
+import { Article } from "./article.model";
+import { ArticleService } from "./article.service";
 // import { ArticleService } from "./../article.service";
 import { Component, OnInit } from "@angular/core";
 // import { ActivatedRoute } from "@angular/router";
@@ -8,11 +10,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./article.component.scss"]
 })
 export class ArticleComponent implements OnInit {
-  constructor() // private activatedRoute: ActivatedRoute,
-  // private articleService: ArticleService //we will use it to get data downloaded by our service from firebase
-  {}
+  // private activatedRoute: ActivatedRoute ( angular book o'reilly)
+  articles: Article[] = [];
+
+  constructor(private articleService: ArticleService) {}
 
   ngOnInit() {
+    //we fetch data from ArticleService to local variable.
+    // this.articles = this.articleService.availableArticles; //we can't do so becouse we set and availableArticles to private and we ll use method to get coipy of an array:
+    this.articles = this.articleService.getAvailableArticles();
     // const articleId = this.activatedRoute.snapshot.paramMap.get("id");
   }
 }
