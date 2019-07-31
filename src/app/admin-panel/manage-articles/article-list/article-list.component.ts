@@ -25,4 +25,9 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
     //its execute ONCE, AFTER VIEW IS DONE - AFTER FIRST INITIALIZING.
     this.dataSource.sort = this.sort; //sort is another builtin dataSource property. and this.sort is our ViewChild which refer to template.
   }
+  doFilter(filterValue: string) {
+    //this is only possible to do with angular material features
+    //below we adjust filter property built in angular material table feature.
+    this.dataSource.filter = filterValue.trim().toLowerCase(); //we trim to avoid whitespace and we convert to lowecase to search exactly what is in table written.
+  }
 }

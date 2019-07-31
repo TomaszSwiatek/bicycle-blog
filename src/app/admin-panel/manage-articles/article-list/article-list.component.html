@@ -1,29 +1,40 @@
-<table mat-table [dataSource]="dataSource" matSort>
-  <!-- matColumnDef - is column identifier./
+<div fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="1rem">
+  <mat-form-field fxFlex="40%">
+    <!-- $event is ng syntax which allows me to get value typed in input. we liste it on each type in character. -->
+    <input
+      matInput
+      type="text"
+      (keyup)="doFilter($event.target.value)"
+      placeholder="Search"
+    />
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" matSort fxFlex="100%">
+    <!-- matColumnDef - is column identifier./
     By ng-container - we define one column - its header and cells with data./
     mat-sort-header - prop ( component selector to be percise) cause that we can sort by this property data. We also need to add matSort prop to table component and ad logic to thisi in .ts file - for this we use ViewChild.
 
    -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
-    <td mat-cell *matCellDef="let element">{{ element.id | number }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-    <td mat-cell *matCellDef="let element">{{ element.title }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="publishDate">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
-    <!-- by pipe we define type ( and autoformat it) of data -->
-    <td mat-cell *matCellDef="let element">{{ element.publishDate | date }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="state">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>state</th>
-    <td mat-cell *matCellDef="let element">{{ element.state }}</td>
-  </ng-container>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.id | number }}</td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+      <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+    </ng-container>
+    <ng-container matColumnDef="publishDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+      <!-- by pipe we define type ( and autoformat it) of data -->
+      <td mat-cell *matCellDef="let element">
+        {{ element.publishDate | date }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>state</th>
+      <td mat-cell *matCellDef="let element">{{ element.state }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
